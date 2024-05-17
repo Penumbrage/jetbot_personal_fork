@@ -7,7 +7,9 @@ L4T_RELEASE=$(echo $L4T_VERSION_STRING | cut -f 2 -d ' ' | grep -Po '(?<=R)[^;]+
 L4T_REVISION=$(echo $L4T_VERSION_STRING | cut -f 2 -d ',' | grep -Po '(?<=REVISION: )[^;]+')
 
 
-export L4T_VERSION="$L4T_RELEASE.$L4T_REVISION"
+# export L4T_VERSION="$L4T_RELEASE.$L4T_REVISION"
+
+export L4T_VERSION=32.5.0
 
 if [[ $L4T_VERSION = "32.4.3" ]]
 then
@@ -15,7 +17,7 @@ then
 elif [[ "$L4T_VERSION" == "32.4.4" ]]
 then
 	JETBOT_BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.4.4-pth1.6-py3
-elif [[ "$L4T_VERSION" == "32.5.0" ]] || [[ "$L4T_VERSION" == "32.5.1" ]]
+elif [[ "$L4T_VERSION" == "32.5.0" ]] || [[ "$L4T_VERSION" == "32.5.1" ]] || [[ "$L4T_VERSION" == "32.5.2" ]] 
 then
 	JETBOT_BASE_IMAGE=nvcr.io/nvidia/l4t-pytorch:r32.5.0-pth1.6-py3
 else
