@@ -3,3 +3,8 @@
 
 # MkDocs documentation
 site/
+
+# Large binary files
+*.pth
+*.zip
+*.engine
